@@ -1,2 +1,2 @@
-# Thong_Tin_Tien_Ao
+# Thông tin tiền ảo
 Bài tập hiển thị thông tin tiền ảo trên máy
