@@ -13,9 +13,9 @@ using System.Net.Http;
 
 namespace ThongTinTienAo
 {
-    public partial class Form1 : Form
+    public partial class formMain : Form
     {
-        public Form1()
+        public formMain()
         {
             InitializeComponent();
         }
@@ -75,6 +75,8 @@ namespace ThongTinTienAo
 
             PingClient pingClient = new PingClient(httpClient, serializerSettings);
             SimpleClient simpleClient = new SimpleClient(httpClient, serializerSettings);
+            CoinGeckoClient coinClient = new CoinGeckoClient(httpClient, serializerSettings);
+
             lblGiaTien.Text = "Đang tìm.....";
             try
             {
@@ -99,6 +101,20 @@ namespace ThongTinTienAo
             {
 
             }
+        }
+
+        private void btnDoThi_Click(object sender, EventArgs e)
+        {
+            if(lblGiaTien.Text.Length > 30)
+            {
+                formGraph fr = new formGraph(tbxNameCoin.Text);
+                fr.Show();
+                
+            }    
+            else
+            {
+                MessageBox.Show("Chưa chọn đúng Coin");
+            }    
         }
     }
 }

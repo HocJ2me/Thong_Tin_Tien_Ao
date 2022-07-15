@@ -1,7 +1,7 @@
 ﻿
 namespace ThongTinTienAo
 {
-    partial class Form1
+    partial class formMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace ThongTinTienAo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -40,12 +40,13 @@ namespace ThongTinTienAo
             this.lblCoinTop2 = new System.Windows.Forms.Label();
             this.lblCoinTop1 = new System.Windows.Forms.Label();
             this.lblTop3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmrUpdateTop3 = new System.Windows.Forms.Timer(this.components);
             this.tbxNameCoin = new System.Windows.Forms.TextBox();
             this.g = new System.Windows.Forms.Label();
             this.btnTim = new System.Windows.Forms.Button();
             this.lblGiaTien = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDoThi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -141,6 +142,16 @@ namespace ThongTinTienAo
             this.lblTop3.TabIndex = 1;
             this.lblTop3.Text = "Top 3 đồng tiền ảo giao dịch nhiều nhất";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(851, 303);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // tmrUpdateTop3
             // 
             this.tmrUpdateTop3.Enabled = true;
@@ -165,9 +176,9 @@ namespace ThongTinTienAo
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(1035, 339);
+            this.btnTim.Location = new System.Drawing.Point(1014, 339);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.Size = new System.Drawing.Size(150, 51);
             this.btnTim.TabIndex = 6;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
@@ -182,29 +193,31 @@ namespace ThongTinTienAo
             this.lblGiaTien.TabIndex = 7;
             this.lblGiaTien.Text = "Giá của đồng tiền: $";
             // 
-            // pictureBox1
+            // btnDoThi
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 97);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(851, 303);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnDoThi.Location = new System.Drawing.Point(1003, 586);
+            this.btnDoThi.Name = "btnDoThi";
+            this.btnDoThi.Size = new System.Drawing.Size(185, 56);
+            this.btnDoThi.TabIndex = 8;
+            this.btnDoThi.Text = "Hiển thị đồ thị";
+            this.btnDoThi.UseVisualStyleBackColor = true;
+            this.btnDoThi.Click += new System.EventHandler(this.btnDoThi_Click);
             // 
-            // Form1
+            // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1315, 654);
+            this.Controls.Add(this.btnDoThi);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.g);
             this.Controls.Add(this.tbxNameCoin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "formMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -234,6 +247,7 @@ namespace ThongTinTienAo
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Label lblGiaTien;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDoThi;
     }
 }
 
